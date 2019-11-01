@@ -1,0 +1,43 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:rvt="clr-namespace:Autodesk.Revit.DB;assembly=RevitAPI">
+
+    <DataTemplate DataType="{x:Type rvt:Wall}">
+        <StackPanel>
+            <TextBlock Foreground="Green">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}Name = {0}">
+                        <Binding Path="Name" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock>
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}Flipped = {0}">
+                        <Binding Path="Flipped" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+        </StackPanel>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type rvt:Floor}">
+        <StackPanel>
+            <TextBlock Foreground="Green">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}Name = {0}">
+                        <Binding Path="Name" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock>
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}IsFoundationSlab = {0}">
+                        <Binding Path="FloorType.IsFoundationSlab" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

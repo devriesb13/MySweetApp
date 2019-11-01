@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>586f3e56-8a3d-4b80-b0ad-fcdfc14ddcf5</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MySweetApp.Revit</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\DockPane_Commands.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Wall_SelectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Floor_SelectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SelectionTypeBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Main_ViewModel.cs" />
+  </ItemGroup>
+</Project>

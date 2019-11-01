@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>60efd10c-f44d-463a-a7a7-edb5f93d4714</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MySweetApp.Navisworks</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DockPane_Plugin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Floor_SelectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Wall_SelectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Circle_SelectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Line_SelectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SelectionTypeBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Main_ViewModel.cs" />
+  </ItemGroup>
+</Project>

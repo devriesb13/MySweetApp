@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# IDE0067: Dispose objects before losing scope
+dotnet_diagnostic.IDE0067.severity = none

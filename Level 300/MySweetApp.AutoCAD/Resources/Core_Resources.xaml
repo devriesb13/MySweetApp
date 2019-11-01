@@ -1,0 +1,77 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:AADS="clr-namespace:Autodesk.AutoCAD.DatabaseServices;assembly=Acdbmgd">
+
+    <DataTemplate DataType="{x:Type AADS:Circle}">
+        <StackPanel>
+            <TextBlock Foreground="Green">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}Layer Name {0}">
+                        <Binding Path="Layer" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock>
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}Center {0}">
+                        <Binding Path="Center" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock>
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}Radius {0}">
+                        <Binding Path="Radius" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type AADS:Line}">
+        <StackPanel>
+            <TextBlock Foreground="Green">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}Layer Name {0}">
+                        <Binding Path="Layer" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock>
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}Start Point {0}">
+                        <Binding Path="StartPoint" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock>
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}End Point {0}">
+                        <Binding Path="EndPoint" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type AADS:Polyline}">
+        <StackPanel>
+            <TextBlock Foreground="Green">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}Layer Name {0}">
+                        <Binding Path="Layer" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock>
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}Closed? {0}">
+                        <Binding Path="Closed" />
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

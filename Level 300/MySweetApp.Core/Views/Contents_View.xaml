@@ -1,0 +1,35 @@
+﻿<UserControl
+    x:Class="MySweetApp.Core.Views.Contents_View"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MySweetApp.Core.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:msa="clr-namespace:MySweetApp.Core.Prism"
+    xmlns:msac="clr-namespace:MySweetApp.Core.Contracts"
+    msa:ViewModelLocator.AutoWireViewModel="True"
+    mc:Ignorable="d" d:DesignWidth="102.151" d:DesignHeight="184.302">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ListBox
+            x:Name="listBox"
+            ItemsSource="{Binding SelectionTypes}"
+            SelectedIndex="0">
+            <ListBox.ItemTemplate>
+                <DataTemplate DataType="{x:Type msac:ISelectionType}">
+                    <TextBlock Text="{Binding Name}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button
+            Grid.Row="1"
+            Height="30"
+            Command="{Binding FindSelection_Command}"
+            CommandParameter="{Binding SelectedItem, ElementName=listBox}"
+            Content="Find" />
+    </Grid>
+</UserControl>
