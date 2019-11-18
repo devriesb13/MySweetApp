@@ -9,12 +9,7 @@
     <Import_RootNamespace>MySweetApp.Navisworks</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)DockPane_Plugin.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Floor_SelectionType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Wall_SelectionType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Circle_SelectionType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Line_SelectionType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\SelectionTypeBase.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Main_ViewModel.cs" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
   </ItemGroup>
 </Project>

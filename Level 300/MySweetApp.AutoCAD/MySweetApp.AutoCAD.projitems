@@ -9,21 +9,11 @@
     <Import_RootNamespace>MySweetApp.AutoCAD</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Commands\Commands_Model.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)EntryPoint_Model.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Bootstrapper_Model.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Circle_SelectionType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Line_SelectionType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Modules\AutoCAD_Module.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Polyline_SelectionType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\FindAutoCADData_Service.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Results_ViewModel.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)Resources\Core_Resources.xaml">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Folder Include="$(MSBuildThisFileDirectory)Commands\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Modules\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
   </ItemGroup>
 </Project>

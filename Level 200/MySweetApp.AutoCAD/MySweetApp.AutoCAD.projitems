@@ -9,16 +9,8 @@
     <Import_RootNamespace>MySweetApp.AutoCAD</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Commands\Commands_Model.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)EntryPoint_Model.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Main_ViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Circle_SelectionType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Line_SelectionType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Polyline_SelectionType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\SelectionTypeBase.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Commands\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
   </ItemGroup>
 </Project>
