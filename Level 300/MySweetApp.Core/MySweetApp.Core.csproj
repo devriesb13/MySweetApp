@@ -100,6 +100,24 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application\MySweetApplication.cs" />
+    <Compile Include="Attributes\DataTemplateAttribute.cs" />
+    <Compile Include="Constants\AppData.cs" />
+    <Compile Include="Constants\RegionNames.cs" />
+    <Compile Include="Contracts\IFindData_Service.cs" />
+    <Compile Include="Contracts\IRegionManagerAware.cs" />
+    <Compile Include="Contracts\IResult.cs" />
+    <Compile Include="Contracts\ISelectionType.cs" />
+    <Compile Include="Enums\ResultTypes_Enum.cs" />
+    <Compile Include="Events\ApplicationIdle_Event.cs" />
+    <Compile Include="Events\SendResult_Event.cs" />
+    <Compile Include="Models\Logger.cs" />
+    <Compile Include="Models\ModuleBase.cs" />
+    <Compile Include="Models\Result_Model.cs" />
+    <Compile Include="Models\SelectionTypeBase.cs" />
+    <Compile Include="Prism\PrismApplication.cs" />
+    <Compile Include="Prism\PrismApplicationBase.cs" />
+    <Compile Include="Prism\ViewModelLocator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -113,6 +131,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ViewModels\Contents_ViewModel.cs" />
+    <Compile Include="ViewModels\DefaultResults_ViewModel.cs" />
+    <Compile Include="Views\Contents_View.xaml.cs">
+      <DependentUpon>Contents_View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DefaultResults_View.xaml.cs">
+      <DependentUpon>DefaultResults_View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shell_View.xaml.cs">
+      <DependentUpon>Shell_View.xaml</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -123,17 +152,20 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Application\" />
-    <Folder Include="Attributes\" />
-    <Folder Include="Constants\" />
-    <Folder Include="Contracts\" />
-    <Folder Include="Enums\" />
-    <Folder Include="Events\" />
-    <Folder Include="Models\" />
-    <Folder Include="Prism\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
+    <Page Include="Views\Contents_View.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DefaultResults_View.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Shell_View.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,8 +9,10 @@
     <Import_RootNamespace>MySweetApp.Revit</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Commands\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\DockPane_Commands.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Floor_SelectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SelectionTypeBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Wall_SelectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Main_ViewModel.cs" />
   </ItemGroup>
 </Project>

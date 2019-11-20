@@ -9,11 +9,21 @@
     <Import_RootNamespace>MySweetApp.Navisworks</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Modules\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Plugins\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bootstrapper_Model.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EntryPoint_Model.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Circle_SelectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Floor_SelectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Line_SelectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Wall_SelectionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modules\Navisworks_Module.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plugins\DockPane_Plugin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\FindNavisworksData_Service.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Results_ViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Resources\Core_Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>
