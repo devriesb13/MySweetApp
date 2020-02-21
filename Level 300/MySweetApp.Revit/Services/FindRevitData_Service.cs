@@ -9,11 +9,8 @@ namespace MySweetApp.Revit.Services
 {
     internal class FindRevitData_Service : IFindData_Service
     {
-        private readonly IContainerProvider containerprovider;
-
-        public FindRevitData_Service(IContainerProvider containerProvider)
+        public FindRevitData_Service()
         {
-            containerprovider = containerProvider;
         }
 
         public IResult GetEntities(dynamic obj)
@@ -22,7 +19,7 @@ namespace MySweetApp.Revit.Services
 
             if (obj is Type data)
             {
-                var doc = containerprovider.Resolve<Document>();
+                var doc = Bootstrapper.Instance.Container.Resolve<Document>();
                 FilteredElementCollector allelements = new FilteredElementCollector(doc).OfClass(data);
                 allelements.ToList().ForEach(element => returnresult.Payload.Add(element));
             }

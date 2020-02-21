@@ -4,7 +4,7 @@ using MySweetApp.Core.Models;
 
 namespace MySweetApp.Revit.Models
 {
-    class Wall_SelectionType : SelectionTypeBase
+    internal class Wall_SelectionType : SelectionTypeBase
     {
         public Wall_SelectionType(IFindData_Service findData_Service) : base("Walls", findData_Service)
         {
